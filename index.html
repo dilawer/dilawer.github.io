@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilawer Hussain | Portfolio</title>
+
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --text-color: #f8fafc;
+      --accent-color: #38bdf8;
+      --muted-color: #94a3b8;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      top: 0;
+      left: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      margin: 0;
+      color: var(--accent-color);
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 8rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted-color);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      color: var(--accent-color);
+    }
+
+    .ventures, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h3 {
+      color: var(--accent-color);
+      margin-top: 0;
+    }
+
+    .card p {
+      color: var(--muted-color);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted-color);
+      border-top: 1px solid #1e293b;
+    }
+
+    .contact-links a {
+      color: var(--accent-color);
+      margin: 0 0.75rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dilawer Hussain</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#projects">Software Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Entrepreneur. Engineer. Builder.</h2>
+    <p>
+      I’m Dilawer Hussain — a Senior iOS Engineer, Software Consultant, and Entrepreneur
+      leading ventures in technology, real estate, and investments across Pakistan.
+    </p>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      With over a decade of experience in software development and business leadership,
+      I combine technical expertise with entrepreneurial vision. I’ve built teams,
+      delivered scalable digital products for global clients, and invested in sustainable
+      construction and financial growth ventures.
+    </p>
+  </section>
+
+  <section id="ventures">
+    <h2 class="section-title">My Ventures</h2>
+    <div class="ventures">
+      <div class="card">
+        <h3>Construction & Real Estate</h3>
+        <p>
+          Developing 3-marla housing units and managing commercial office spaces generating
+          sustainable rental income in Lahore and surrounding areas.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Investment & ROI Strategy</h3>
+        <p>
+          Active investor in Al Meezan and other diversified portfolios with focus on
+          passive income and capital growth.
+        </p>
+      </div>
+      <div class="card">
+        <h3>IT Consultancy</h3>
+        <p>
+          Founder of a software company helping startups across the U.S., Europe, and the
+          Middle East raise over $20M through innovative digital products.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Software Work</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>iOS Development</h3>
+        <p>
+          Expert in Swift, SwiftUI, and Objective-C. Delivered multiple production apps
+          including finance, lifestyle, and IoT-enabled experiences.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Cross-Platform Solutions</h3>
+        <p>
+          Led teams delivering React Native and Flutter apps with scalable APIs and
+          cloud backends using AWS and Firebase.
+        </p>
+      </div>
+      <div class="card">
+        <h3>AI & Automation</h3>
+        <p>
+          Building internal AI agents, Slack bots, and process automation for operations
+          efficiency and business growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <p style="text-align:center; color:var(--muted-color)">
+      Let’s collaborate, connect, or explore ideas together.
+    </p>
+    <div class="contact-links" style="text-align:center; margin-top:1rem;">
+      <a href="mailto:your.email@example.com">Email</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Threads/X</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Dilawer Hussain — All Rights Reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
