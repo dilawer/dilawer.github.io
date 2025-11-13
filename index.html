@@ -33,13 +33,22 @@
     .hero-text { display: flex; flex-direction: column; align-items: center; }
     .hero-name { font-size: 2.75rem; font-weight: 700; margin-bottom: 10px; transition: all 0.4s ease; }
     .hero-position { font-size: 1.2rem; opacity: 0.9; transition: all 0.4s ease; }
-    .contact-info a {
+
+    .contact-info {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    flex-wrap: wrap;
+    gap: 20px; /* space between each link */
+    margin-top: 15px;
+}
+
+.contact-info a {
+    display: inline-flex;      /* align icon & text */
+    align-items: center;       /* vertical alignment */
+    gap: 5px;                  /* smaller space between icon & text */
     color: white;
     text-decoration: none;
     font-weight: 500;
-    display: flex;
-    align-items: center; /* vertically center text & icon */
-    gap: 3px; /* smaller space between icon & text */
     transition: opacity 0.3s;
 }
 
@@ -47,7 +56,7 @@
     opacity: 0.8;
 }
 
-.contact-info .icon {
+.contact-info a svg {
     display: inline-block;
     vertical-align: middle;
 }
@@ -214,22 +223,22 @@
         </div>
         <div class="contact-info">
     <a href="mailto:info.dilawer@gmail.com">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm2-1a1 1 0 00-1 1v.217l7 4.2 7-4.2V4a1 1 0 00-1-1H2zm13 2.383l-5.857 3.51L15 12.383V5.383zm-1.243 7.172l-5.757-3.452L2.243 12.555A1 1 0 003 13h10a1 1 0 00.757-.445zM1 5.383v7l5.857-3.49L1 5.383z"/>
         </svg>
-        info.dilawer@gmail.com
+        <span>info.dilawer@gmail.com</span>
     </a>
     <a href="https://linkedin.com/in/dilawerhussain" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.751s.784-1.751 1.75-1.751c.966 0 1.75.785 1.75 1.751s-.784 1.751-1.75 1.751zm13.5 11.268h-3v-5.604c0-1.338-.026-3.062-1.865-3.062-1.867 0-2.153 1.459-2.153 2.966v5.7h-3v-10h2.881v1.367h.041c.401-.757 1.379-1.555 2.838-1.555 3.034 0 3.597 1.996 3.597 4.592v5.596z"/>
         </svg>
-        LinkedIn
+        <span>LinkedIn</span>
     </a>
     <a href="https://github.com/dilawer" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.074.547-.174.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.727-.497.055-.487.055-.487.803.056 1.226.826 1.226.826.714 1.223 1.872.87 2.33.666.072-.517.28-.87.508-1.07-1.777-.202-3.644-.888-3.644-3.953 0-.873.312-1.588.823-2.148-.083-.203-.357-1.018.078-2.122 0 0 .672-.215 2.2.82a7.65 7.65 0 012.004-.27c.68.003 1.364.092 2.004.27 1.528-1.035 2.2-.82 2.2-.82.435 1.104.161 1.919.078 2.122.513.56.823 1.275.823 2.148 0 3.073-1.87 3.748-3.65 3.947.287.247.543.735.543 1.482 0 1.07-.01 1.934-.01 2.197 0 .213.144.463.55.384A8.001 8.001 0 0016 8c0-4.42-3.58-8-8-8z"/>
         </svg>
-        GitHub
+        <span>GitHub</span>
     </a>
 </div>
 
