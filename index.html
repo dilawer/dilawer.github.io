@@ -37,57 +37,68 @@
     .hero .contact-info a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
     .hero .contact-info a:hover { opacity: 0.8; }
 
-    /* Sticky Header Animation - Improved */
+    /* Sticky Header Full Width */
 .hero.sticky .hero-inner {
     position: fixed;
-    max-width: 1200px; margin: 0 auto; padding: 0 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    padding: 10px 20px; /* optional inner padding */
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: auto; /* let content adjust */
     z-index: 1000;
     background: rgba(255,255,255,0.95);
-    border-radius: 12px;
+    border-radius: 0 0 12px 12px; /* only bottom corners rounded */
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
 
 .hero.sticky .hero-img {
     width: 60px;
     height: 60px;
     margin-bottom: 0;
+    transition: all 0.3s ease;
 }
 
 .hero.sticky .hero-text {
     margin-left: 15px;
-    align-items: center; /* keep text vertically centered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
 .hero.sticky .hero-name {
     font-size: 1.25rem;
     color: var(--text-dark);
-    margin-bottom: 0; /* remove extra spacing */
-    white-space: nowrap; /* prevent wrapping */
+    margin-bottom: 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 .hero.sticky .hero-position {
     font-size: 0.85rem;
     color: var(--text-medium);
-    white-space: nowrap; /* keep in one line */
-    margin-left: 10px; /* optional spacing from name */
+    white-space: nowrap;
+    margin-left: 0;
+    transition: all 0.3s ease;
 }
 
 /* Mobile adjustments */
 @media (max-width: 480px) {
     .hero.sticky .hero-inner {
-        flex-direction: column; /* stack image & text if necessary */
-        padding: 5px 12px;
+        flex-direction: column;
+        padding: 8px 12px;
+        border-radius: 0 0 8px 8px; /* smaller bottom radius on mobile */
     }
     .hero.sticky .hero-name, 
     .hero.sticky .hero-position {
-        font-size: 1rem; /* slightly smaller for mobile */
-        white-space: nowrap; /* force single line */
+        font-size: 1rem;
+        white-space: nowrap;
         text-align: center;
     }
     .hero.sticky .hero-text {
@@ -95,6 +106,7 @@
         margin-top: 5px;
     }
 }
+
 
 
 
