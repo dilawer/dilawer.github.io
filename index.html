@@ -35,107 +35,95 @@
     .hero-position { font-size: 1.2rem; opacity: 0.9; transition: all 0.4s ease; }
 
     .contact-info {
-    display: flex;
-    justify-content: center; /* horizontal center */
-    flex-wrap: wrap;
-    gap: 20px; /* space between each link */
-    margin-top: 15px;
-}
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 15px;
+    }
 
-.contact-info a {
-    display: inline-flex;      /* align icon & text */
-    align-items: center;       /* vertical alignment */
-    gap: 5px;                  /* smaller space between icon & text */
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.3s;
-}
+    .contact-info a {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s;
+    }
 
-.contact-info a:hover {
-    opacity: 0.8;
-}
+    .contact-info a:hover { opacity: 0.8; }
+    .contact-info a svg { display: inline-block; vertical-align: middle; }
 
-.contact-info a svg {
-    display: inline-block;
-    vertical-align: middle;
-}
-    /* .hero .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 15px; }
-    .hero .contact-info a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
-    .hero .contact-info a:hover { opacity: 0.8; } */
-
-    /* Sticky Header Full Width */
-.hero.sticky .hero-inner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: none;
-    padding: 10px 20px; /* optional inner padding */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    background: rgba(255,255,255,0.95);
-    border-radius: 0 0 12px 12px; /* only bottom corners rounded */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-}
-
-.hero.sticky .hero-img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0;
-    transition: all 0.3s ease;
-}
-
-.hero.sticky .hero-text {
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.hero.sticky .hero-name {
-    font-size: 1.25rem;
-    color: var(--text-dark);
-    margin-bottom: 0;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-
-.hero.sticky .hero-position {
-    font-size: 0.85rem;
-    color: var(--text-medium);
-    white-space: nowrap;
-    margin-left: 0;
-    transition: all 0.3s ease;
-}
-
-/* Mobile adjustments */
-@media (max-width: 480px) {
+    /* Sticky Header */
     .hero.sticky .hero-inner {
-        flex-direction: column;
-        padding: 8px 12px;
-        border-radius: 0 0 8px 8px; /* smaller bottom radius on mobile */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(255,255,255,0.95);
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
     }
-    .hero.sticky .hero-name, 
-    .hero.sticky .hero-position {
-        font-size: 1rem;
-        white-space: nowrap;
-        text-align: center;
+
+    .hero.sticky .hero-img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0;
+        transition: all 0.3s ease;
     }
+
     .hero.sticky .hero-text {
-        margin-left: 0;
-        margin-top: 5px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
     }
-}
 
+    .hero.sticky .hero-name {
+        font-size: 1.25rem;
+        color: var(--text-dark);
+        margin-bottom: 0;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
 
+    .hero.sticky .hero-position {
+        font-size: 0.85rem;
+        color: var(--text-medium);
+        white-space: nowrap;
+        margin-left: 0;
+        transition: all 0.3s ease;
+    }
 
+    /* Mobile adjustments */
+    @media (max-width: 480px) {
+        .hero.sticky .hero-inner {
+            flex-direction: column;
+            padding: 8px 12px;
+            border-radius: 0 0 8px 8px;
+        }
+        .hero.sticky .hero-name, 
+        .hero.sticky .hero-position {
+            font-size: 1rem;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .hero.sticky .hero-text {
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
 
     /* Cards */
     .card { background: var(--bg-white); border-radius: 16px; padding: 40px; margin-bottom: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
@@ -222,27 +210,49 @@
             </div>
         </div>
         <div class="contact-info">
-    <a href="mailto:info.dilawer@gmail.com">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm2-1a1 1 0 00-1 1v.217l7 4.2 7-4.2V4a1 1 0 00-1-1H2zm13 2.383l-5.857 3.51L15 12.383V5.383zm-1.243 7.172l-5.757-3.452L2.243 12.555A1 1 0 003 13h10a1 1 0 00.757-.445zM1 5.383v7l5.857-3.49L1 5.383z"/>
-        </svg>
-        <span>info.dilawer@gmail.com</span>
-    </a>
-    <a href="https://linkedin.com/in/dilawerhussain" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.751s.784-1.751 1.75-1.751c.966 0 1.75.785 1.75 1.751s-.784 1.751-1.75 1.751zm13.5 11.268h-3v-5.604c0-1.338-.026-3.062-1.865-3.062-1.867 0-2.153 1.459-2.153 2.966v5.7h-3v-10h2.881v1.367h.041c.401-.757 1.379-1.555 2.838-1.555 3.034 0 3.597 1.996 3.597 4.592v5.596z"/>
-        </svg>
-        <span>LinkedIn</span>
-    </a>
-    <a href="https://github.com/dilawer" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.074.547-.174.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.727-.497.055-.487.055-.487.803.056 1.226.826 1.226.826.714 1.223 1.872.87 2.33.666.072-.517.28-.87.508-1.07-1.777-.202-3.644-.888-3.644-3.953 0-.873.312-1.588.823-2.148-.083-.203-.357-1.018.078-2.122 0 0 .672-.215 2.2.82a7.65 7.65 0 012.004-.27c.68.003 1.364.092 2.004.27 1.528-1.035 2.2-.82 2.2-.82.435 1.104.161 1.919.078 2.122.513.56.823 1.275.823 2.148 0 3.073-1.87 3.748-3.65 3.947.287.247.543.735.543 1.482 0 1.07-.01 1.934-.01 2.197 0 .213.144.463.55.384A8.001 8.001 0 0016 8c0-4.42-3.58-8-8-8z"/>
-        </svg>
-        <span>GitHub</span>
-    </a>
-</div>
-
+            <!-- Contact links remain unchanged -->
+            <a href="mailto:info.dilawer@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm2-1a1 1 0 00-1 1v.217l7 4.2 7-4.2V4a1 1 0 00-1-1H2zm13 2.383l-5.857 3.51L15 12.383V5.383zm-1.243 7.172l-5.757-3.452L2.243 12.555A1 1 0 003 13h10a1 1 0 00.757-.445zM1 5.383v7l5.857-3.49L1 5.383z"/>
+                </svg>
+                <span>info.dilawer@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/dilawerhussain" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.751s.784-1.751 1.75-1.751c.966 0 1.75.785 1.75 1.751s-.784 1.751-1.75 1.751zm13.5 11.268h-3v-5.604c0-1.338-.026-3.062-1.865-3.062-1.867 0-2.153 1.459-2.153 2.966v5.7h-3v-10h2.881v1.367h.041c.401-.757 1.379-1.555 2.838-1.555 3.034 0 3.597 1.996 3.597 4.592v5.596z"/>
+                </svg>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/dilawer" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.074.547-.174.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.727-.497.055-.487.055-.487.803.056 1.226.826 1.226.826.714 1.223 1.872.87 2.33.666.072-.517.28-.87.508-1.07-1.777-.202-3.644-.888-3.644-3.953 0-.873.312-1.588.823-2.148-.083-.203-.357-1.018.078-2.122 0 0 .672-.215 2.2.82a7.65 7.65 0 012.004-.27c.68.003 1.364.092 2.004.27 1.528-1.035 2.2-.82 2.2-.82.435 1.104.161 1.919.078 2.122.513.56.823 1.275.823 2.148 0 3.073-1.87 3.748-3.65 3.947.287.247.543.735.543 1.482 0 1.07-.01 1.934-.01 2.197 0 .213.144.463.55.384A8.001 8.001 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                <span>GitHub</span>
+            </a>
+        </div>
     </div>
 </section>
 
-<div class="main-content"> <div class="container"> <!-- Professional Summary --> <div class="card"> <h2 class="section-title">Professional Summary</h2> <div class="summary"> <p><strong>Mobile Engineering Leader & Fractional CTO</strong> with 14+ years architecting and delivering 300+ mobile and web applications across 15+ industries. Deep expertise in native iOS (Swift, Objective-C) and Android (Kotlin, Java), plus cross-platform frameworks (React Native, Flutter). Proven track record building and scaling engineering teams, defining product strategy, and delivering technology solutions that helped startups raise $20M+ in funding.</p> <p><strong>Unique Blend:</strong> Technical depth + team leadership + product thinking + academic mentorship. Successfully delivered solutions for clients across 8 countries spanning FinTech, HealthTech, EV, IoT, eCommerce, and On-Demand services.</p> </div> <!-- Stats --> <div class="stats-grid"> <div class="stat-card"> <div class="stat-number">300+</div> <div class="stat-label">Apps Delivered</div> </div> <div class="stat-card"> <div class="stat-number">14+</div> <div class="stat-label">Years Experience</div> </div> <div class="stat-card"> <div class="stat-number">600+</div> <div class="stat-label">IoT Deployments</div> </div> <div class="stat-card"> <div class="stat-number">$20M+</div> <div class="stat-label">Funding Enabled</div> </div> </div> </div> <!-- Core Technical Expertise --> <div class="card"> <h2 class="section-title">Core Technical Expertise</h2> <div class="skills-grid"> <div class="skill-category"> <h4>Mobile Native</h4> <p>Swift, Objective-C, Kotlin, Java, SwiftUI, UIKit, Jetpack Compose</p> </div> <div class="skill-category"> <h4>Cross-Platform</h4> <p>React Native, Flutter</p> </div> <div class="skill-category"> <h4>Web Stack</h4> <p>ReactJS, NodeJS, PHP/Laravel</p> </div> <div class="skill-category"> <h4>Backend & Cloud</h4> <p>Firebase, AWS, REST/GraphQL APIs, MySQL, PostgreSQL</p> </div> <div class="skill-category"> <h4>Specializations</h4> <p>IoT Integration, BLE, Geolocation, Payment Systems, Real-time Tracking</p> </div> <div class="skill-category"> <h4>Tools</h4> <p>Xcode, Android Studio, Git, Jira, CI/CD, Fastlane</p> </div> </div> </div> <!-- Career Highlights --> <div class="card"> <h2 class="section-title">Career Highlights</h2> <div class="highlights-grid"> <div class="highlight-item">300+ Applications Delivered across 15+ industries for startups and enterprises globally</div> <div class="highlight-item">IoT at Scale: Deployed in 600+ institutions enabling real-time student safety monitoring</div> <div class="highlight-item">20+ Sports Apps from unified white-label coaching platform</div> <div class="highlight-item">Built marketplace ecosystems connecting thousands of service providers with customers</div> <div class="highlight-item">Interviewed 5,000+ candidates and built teams from 3 to 25+ members</div> <div class="highlight-item">Global Experience: USA, Canada, Mexico, Spain, Denmark, Netherlands, Saudi Arabia, Oman</div> <div class="highlight-item">Taught 8 Semesters at University of the Punjab covering Mobile, Web, and Entrepreneurship</div> <div class="highlight-item">Mentored 25-30 Senior IT Professionals in UK Product Management Accelerator</div> <div class="highlight-item">Technical leadership contributed to $20M+ raised by client startups</div> </div> </div> <!-- Professional Experience --> <div class="card"> <h2 class="section-title">Professional Experience</h2> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Founder & CTO</div> <div class="experience-company"><a href="https://www.tboxsolutionz.com" target="_blank" rel="noopener noreferrer">Tbox Solutionz</a></div> <div class="experience-meta">📍 Lahore, Pakistan | 📅 2013 – Present</div> </div> <div class="experience-content"> <strong>Technical Leadership:</strong> <ul> <li>Architected and delivered 300+ native and cross-platform mobile applications across FinTech, HealthTech, EV, IoT, eCommerce, and On-Demand sectors</li> <li>Built scalable systems serving 100K+ active users with 99.9% uptime</li> <li>Established engineering best practices, code review processes, and CI/CD pipelines reducing release cycles by 40%</li> <li>Led technical due diligence for clients raising venture funding, resulting in $20M+ secured</li> </ul> <strong>Team & Product Leadership:</strong> <ul> <li>Scaled engineering team from 3 to 25+ members (mobile, web, QA, DevOps)</li> <li>Performed roles spanning CTO, Technical Product Manager, Team Lead, and Technical Consultant</li> <li>Conducted 5,000+ technical interviews establishing robust hiring frameworks</li> <li>Mentored junior and mid-level engineers into technical leads</li> </ul> </div> </div> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Fractional CTO / Mobile Consultant</div> <div class="experience-company">Global Remote</div> <div class="experience-meta">📅 2013 – Present</div> </div> <div class="experience-content"> <ul> <li>Partnered with 40+ startups to define technical roadmaps, select technology stacks, and execute MVP strategies</li> <li>Provided architecture reviews, code audits, and team scaling guidance</li> <li>Upwork Top Rated Plus: $100K+ earned, 103+ projects, 4,500+ hours, 100% Job Success Score</li> <li>Delivered consulting across USA, Europe, and Middle East markets</li> </ul> </div> </div> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Visiting Lecturer</div> <div class="experience-company"><a href="https://www.pucit.edu.pk" target="_blank" rel="noopener noreferrer">University of the Punjab (PUCIT)</a></div> <div class="experience-meta">📍 Lahore, Pakistan | 📅 2013 – 2014 & 2018 – 2019</div> </div> <div class="experience-content"> <ul> <li>Taught 8 consecutive semesters covering Mobile App Development (iOS, Android), Web Development, Entrepreneurship, and Enterprise Software Development</li> <li>Conducted 80+ classroom sessions integrating real-world startup experience with academic curriculum</li> <li>Supervised 15+ final-year project teams producing production-grade applications</li> <li>Bridged industry-academia gap by teaching scalable architecture, clean code practices, and product thinking</li> </ul> </div> </div> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Product Management Mentor</div> <div class="experience-company"><a href="https://www.linkedin.com/school/knowledge-officer-career-accelerator/" target="_blank" rel="noopener noreferrer">Knowledge Officer Career Accelerator (UK)</a></div> <div class="experience-meta">🌐 Remote | 📅 2020 – 2023</div> </div> <div class="experience-content"> <ul> <li>Mentored cohort of 25-30 experienced IT professionals (average 10+ years experience) in funded UK EdTech startup</li> <li>Provided guidance on agile methodologies, MVP validation, technical-product alignment, and leadership practices</li> <li>Supported professionals transitioning into product management and technical leadership roles</li> </ul> </div> </div> </div> <!-- Case Studies --> <div class="card"> <h2 class="section-title">Representative Case Studies</h2> <div class="case-study"> <h4>🏫 IoT School Safety Platform</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>Schools needed real-time visibility into student transportation for safety and parent communication.</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Built end-to-end iOS/Android app with GPS tracking, geofencing, automated notifications, and admin dashboard.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>Deployed in 600+ schools, tracking thousands of daily routes with 99.9% uptime.</p> </div> </div> <div class="case-study"> <h4>⚽ Multi-Brand Sports Coaching Suite</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>Sports organizations needed customized coaching apps without building from scratch.</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Architected white-label platform enabling 20+ branded apps from single codebase.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>60% cost reduction vs. individual builds, 3-week time-to-market per new brand.</p> </div> </div> <div class="case-study"> <h4>🔧 On-Demand Services Marketplace</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>Connect customers with nearby service providers (electricians, designers, freelancers).</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Built dual-sided marketplace with geolocation, real-time booking, payments, and rating system.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>Launched in 3 markets, 10K+ service providers onboarded in first year.</p> </div> </div> <div class="case-study"> <h4>🚗 EV Charging Network</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>EV drivers needed seamless way to find, book, and pay for charging stations.</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Mobile apps with station discovery, availability tracking, navigation, and integrated payments.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>Contributed to client raising Series A funding.</p> </div> </div> </div> <!-- Domain Expertise --> <div class="card"> <h2 class="section-title">Domain Expertise (15+ Industries)</h2> <div class="domains-grid"> <div class="domain-tag"><span class="domain-icon">💳</span> FinTech</div> <div class="domain-tag"><span class="domain-icon">🏥</span> HealthTech</div> <div class="domain-tag"><span class="domain-icon">🚗</span> EV & Automotive</div> <div class="domain-tag"><span class="domain-icon">🏫</span> EdTech</div> <div class="domain-tag"><span class="domain-icon">🛒</span> eCommerce</div> <div class="domain-tag"><span class="domain-icon">📦</span> Logistics</div> <div class="domain-tag"><span class="domain-icon">🏠</span> On-Demand Services</div> <div class="domain-tag"><span class="domain-icon">💇</span> Beauty & Wellness</div> <div class="domain-tag"><span class="domain-icon">⚽</span> Sports Tech</div> <div class="domain-tag"><span class="domain-icon">📱</span> Media & Publishing</div> <div class="domain-tag"><span class="domain-icon">💬</span> Communication</div> <div class="domain-tag"><span class="domain-icon">🌐</span> IoT Solutions</div> </div> </div> <!-- CTA Section --> <div class="cta-section"> <h3>Let's Build Something Amazing Together</h3> <p>Whether you need a Fractional CTO, Staff Engineer, or Technical Consultant — I bring 14 years of proven expertise to help scale your technology and team.</p> <div class="cta-buttons"> <a href="mailto:info.dilawer@gmail.com" class="btn btn-primary">📧 Get in Touch</a> <a href="https://linkedin.com/in/dilawerhussain" target="_blank" class="btn btn-secondary">💼 Connect on LinkedIn</a> </div> </div> </div> </div> <!-- Footer --> <footer class="footer"> <div class="container"> <p>&copy; 2025 Dilawer Hussain. All rights reserved.</p> <p>Fractional CTO | Staff Mobile Engineer | Technical Leader</p> </div> </footer> </body> </html>
+<div class="main-content"> <div class="container"> <!-- Professional Summary --> <div class="card"> <h2 class="section-title">Professional Summary</h2> <div class="summary"> <p><strong>Mobile Engineering Leader & Fractional CTO</strong> with 14+ years architecting and delivering 300+ mobile and web applications across 15+ industries. Deep expertise in native iOS (Swift, Objective-C) and Android (Kotlin, Java), plus cross-platform frameworks (React Native, Flutter). Proven track record building and scaling engineering teams, defining product strategy, and delivering technology solutions that helped startups raise $20M+ in funding.</p> <p><strong>Unique Blend:</strong> Technical depth + team leadership + product thinking + academic mentorship. Successfully delivered solutions for clients across 8 countries spanning FinTech, HealthTech, EV, IoT, eCommerce, and On-Demand services.</p> </div> <!-- Stats --> <div class="stats-grid"> <div class="stat-card"> <div class="stat-number">300+</div> <div class="stat-label">Apps Delivered</div> </div> <div class="stat-card"> <div class="stat-number">14+</div> <div class="stat-label">Years Experience</div> </div> <div class="stat-card"> <div class="stat-number">600+</div> <div class="stat-label">IoT Deployments</div> </div> <div class="stat-card"> <div class="stat-number">$20M+</div> <div class="stat-label">Funding Enabled</div> </div> </div> </div> <!-- Core Technical Expertise --> <div class="card"> <h2 class="section-title">Core Technical Expertise</h2> <div class="skills-grid"> <div class="skill-category"> <h4>Mobile Native</h4> <p>Swift, Objective-C, Kotlin, Java, SwiftUI, UIKit, Jetpack Compose</p> </div> <div class="skill-category"> <h4>Cross-Platform</h4> <p>React Native, Flutter</p> </div> <div class="skill-category"> <h4>Web Stack</h4> <p>ReactJS, NodeJS, PHP/Laravel</p> </div> <div class="skill-category"> <h4>Backend & Cloud</h4> <p>Firebase, AWS, REST/GraphQL APIs, MySQL, PostgreSQL</p> </div> <div class="skill-category"> <h4>Specializations</h4> <p>IoT Integration, BLE, Geolocation, Payment Systems, Real-time Tracking</p> </div> <div class="skill-category"> <h4>Tools</h4> <p>Xcode, Android Studio, Git, Jira, CI/CD, Fastlane</p> </div> </div> </div> <!-- Career Highlights --> <div class="card"> <h2 class="section-title">Career Highlights</h2> <div class="highlights-grid"> <div class="highlight-item">300+ Applications Delivered across 15+ industries for startups and enterprises globally</div> <div class="highlight-item">IoT at Scale: Deployed in 600+ institutions enabling real-time student safety monitoring</div> <div class="highlight-item">20+ Sports Apps from unified white-label coaching platform</div> <div class="highlight-item">Built marketplace ecosystems connecting thousands of service providers with customers</div> <div class="highlight-item">Interviewed 5,000+ candidates and built teams from 3 to 25+ members</div> <div class="highlight-item">Global Experience: USA, Canada, Mexico, Spain, Denmark, Netherlands, Saudi Arabia, Oman</div> <div class="highlight-item">Taught 8 Semesters at University of the Punjab covering Mobile, Web, and Entrepreneurship</div> <div class="highlight-item">Mentored 25-30 Senior IT Professionals in UK Product Management Accelerator</div> <div class="highlight-item">Technical leadership contributed to $20M+ raised by client startups</div> </div> </div> <!-- Professional Experience --> <div class="card"> <h2 class="section-title">Professional Experience</h2> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Founder & CTO</div> <div class="experience-company"><a href="https://www.tboxsolutionz.com" target="_blank" rel="noopener noreferrer">Tbox Solutionz</a></div> <div class="experience-meta">📍 Lahore, Pakistan | 📅 2013 – Present</div> </div> <div class="experience-content"> <strong>Technical Leadership:</strong> <ul> <li>Architected and delivered 300+ native and cross-platform mobile applications across FinTech, HealthTech, EV, IoT, eCommerce, and On-Demand sectors</li> <li>Built scalable systems serving 100K+ active users with 99.9% uptime</li> <li>Established engineering best practices, code review processes, and CI/CD pipelines reducing release cycles by 40%</li> <li>Led technical due diligence for clients raising venture funding, resulting in $20M+ secured</li> </ul> <strong>Team & Product Leadership:</strong> <ul> <li>Scaled engineering team from 3 to 25+ members (mobile, web, QA, DevOps)</li> <li>Performed roles spanning CTO, Technical Product Manager, Team Lead, and Technical Consultant</li> <li>Conducted 5,000+ technical interviews establishing robust hiring frameworks</li> <li>Mentored junior and mid-level engineers into technical leads</li> </ul> </div> </div> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Fractional CTO / Mobile Consultant</div> <div class="experience-company">Global Remote</div> <div class="experience-meta">📅 2013 – Present</div> </div> <div class="experience-content"> <ul> <li>Partnered with 40+ startups to define technical roadmaps, select technology stacks, and execute MVP strategies</li> <li>Provided architecture reviews, code audits, and team scaling guidance</li> <li>Upwork Top Rated Plus: $100K+ earned, 103+ projects, 4,500+ hours, 100% Job Success Score</li> <li>Delivered consulting across USA, Europe, and Middle East markets</li> </ul> </div> </div> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Visiting Lecturer</div> <div class="experience-company"><a href="https://www.pucit.edu.pk" target="_blank" rel="noopener noreferrer">University of the Punjab (PUCIT)</a></div> <div class="experience-meta">📍 Lahore, Pakistan | 📅 2013 – 2014 & 2018 – 2019</div> </div> <div class="experience-content"> <ul> <li>Taught 8 consecutive semesters covering Mobile App Development (iOS, Android), Web Development, Entrepreneurship, and Enterprise Software Development</li> <li>Conducted 80+ classroom sessions integrating real-world startup experience with academic curriculum</li> <li>Supervised 15+ final-year project teams producing production-grade applications</li> <li>Bridged industry-academia gap by teaching scalable architecture, clean code practices, and product thinking</li> </ul> </div> </div> <div class="experience-item"> <div class="experience-header"> <div class="experience-title">Product Management Mentor</div> <div class="experience-company"><a href="https://www.linkedin.com/school/knowledge-officer-career-accelerator/" target="_blank" rel="noopener noreferrer">Knowledge Officer Career Accelerator (UK)</a></div> <div class="experience-meta">🌐 Remote | 📅 2020 – 2023</div> </div> <div class="experience-content"> <ul> <li>Mentored cohort of 25-30 experienced IT professionals (average 10+ years experience) in funded UK EdTech startup</li> <li>Provided guidance on agile methodologies, MVP validation, technical-product alignment, and leadership practices</li> <li>Supported professionals transitioning into product management and technical leadership roles</li> </ul> </div> </div> </div> <!-- Case Studies --> <div class="card"> <h2 class="section-title">Representative Case Studies</h2> <div class="case-study"> <h4>🏫 IoT School Safety Platform</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>Schools needed real-time visibility into student transportation for safety and parent communication.</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Built end-to-end iOS/Android app with GPS tracking, geofencing, automated notifications, and admin dashboard.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>Deployed in 600+ schools, tracking thousands of daily routes with 99.9% uptime.</p> </div> </div> <div class="case-study"> <h4>⚽ Multi-Brand Sports Coaching Suite</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>Sports organizations needed customized coaching apps without building from scratch.</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Architected white-label platform enabling 20+ branded apps from single codebase.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>60% cost reduction vs. individual builds, 3-week time-to-market per new brand.</p> </div> </div> <div class="case-study"> <h4>🔧 On-Demand Services Marketplace</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>Connect customers with nearby service providers (electricians, designers, freelancers).</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Built dual-sided marketplace with geolocation, real-time booking, payments, and rating system.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>Launched in 3 markets, 10K+ service providers onboarded in first year.</p> </div> </div> <div class="case-study"> <h4>🚗 EV Charging Network</h4> <div class="case-study-section"> <strong>Challenge:</strong> <p>EV drivers needed seamless way to find, book, and pay for charging stations.</p> </div> <div class="case-study-section"> <strong>Solution:</strong> <p>Mobile apps with station discovery, availability tracking, navigation, and integrated payments.</p> </div> <div class="case-study-section"> <strong>Impact:</strong> <p>Contributed to client raising Series A funding.</p> </div> </div> </div> <!-- Domain Expertise --> <div class="card"> <h2 class="section-title">Domain Expertise (15+ Industries)</h2> <div class="domains-grid"> <div class="domain-tag"><span class="domain-icon">💳</span> FinTech</div> <div class="domain-tag"><span class="domain-icon">🏥</span> HealthTech</div> <div class="domain-tag"><span class="domain-icon">🚗</span> EV & Automotive</div> <div class="domain-tag"><span class="domain-icon">🏫</span> EdTech</div> <div class="domain-tag"><span class="domain-icon">🛒</span> eCommerce</div> <div class="domain-tag"><span class="domain-icon">📦</span> Logistics</div> <div class="domain-tag"><span class="domain-icon">🏠</span> On-Demand Services</div> <div class="domain-tag"><span class="domain-icon">💇</span> Beauty & Wellness</div> <div class="domain-tag"><span class="domain-icon">⚽</span> Sports Tech</div> <div class="domain-tag"><span class="domain-icon">📱</span> Media & Publishing</div> <div class="domain-tag"><span class="domain-icon">💬</span> Communication</div> <div class="domain-tag"><span class="domain-icon">🌐</span> IoT Solutions</div> </div> </div> <!-- CTA Section --> <div class="cta-section"> <h3>Let's Build Something Amazing Together</h3> <p>Whether you need a Fractional CTO, Staff Engineer, or Technical Consultant — I bring 14 years of proven expertise to help scale your technology and team.</p> <div class="cta-buttons"> <a href="mailto:info.dilawer@gmail.com" class="btn btn-primary">📧 Get in Touch</a> <a href="https://linkedin.com/in/dilawerhussain" target="_blank" class="btn btn-secondary">💼 Connect on LinkedIn</a> </div> </div> </div> </div> 
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Dilawer Hussain. All rights reserved.</p>
+        <p>Fractional CTO | Staff Mobile Engineer | Technical Leader</p>
+    </div>
+</footer>
+
+<script>
+    // Scroll-triggered sticky header
+    window.addEventListener('scroll', function() {
+        const hero = document.querySelector('.hero');
+        if (window.scrollY > 150) { // adjust threshold as needed
+            hero.classList.add('sticky');
+        } else {
+            hero.classList.remove('sticky');
+        }
+    });
+</script>
+
+</body>
+</html>
