@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dilawer Hussain - Fractional CTO | Staff Mobile Engineer</title>
   <style>
     /* Global Reset */
@@ -13,20 +13,19 @@
     }
 
     :root {
-      --primary: #3b82f6; /* Softer blue */
+      --primary: #3b82f6;
       --primary-dark: #1e3a8a;
       --secondary: #64748b;
       --bg-light: #f9fafb;
       --bg-white: #ffffff;
       --text-dark: #0f172a;
       --text-medium: #475569;
-      --text-light: #94a3b8;
       --border: #e2e8f0;
-      --accent: #38bdf8; /* Soft sky blue accent */
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
       line-height: 1.6;
       color: var(--text-dark);
       background: var(--bg-light);
@@ -44,15 +43,6 @@
       color: white;
       padding: 60px 0 80px;
       position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L50 50L0 100" stroke="rgba(255,255,255,0.05)" stroke-width="2"/><path d="M50 0L100 50L50 100" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
-      opacity: 0.4;
     }
 
     .hero-content {
@@ -113,7 +103,7 @@
       filter: brightness(0) invert(1);
     }
 
-    /* Cards and Content */
+    /* Main Content */
     .main-content {
       margin-top: -40px;
       position: relative;
@@ -191,34 +181,65 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .card { padding: 25px; }
-      .profile-image { width: 140px; height: 140px; }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 25px;
+      }
+      .profile-image {
+        width: 140px;
+        height: 140px;
+      }
     }
   </style>
 </head>
 <body>
-
   <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <img src="headshot.jpg" alt="Dilawer Hussain" class="profile-image">
+        <img
+          src="headshot.jpg"
+          alt="Dilawer Hussain"
+          class="profile-image"
+        />
         <div>
           <h1>Dilawer Hussain</h1>
-          <p class="tagline">Fractional CTO | Staff Mobile Engineer | Technical Leader</p>
+          <p class="tagline">
+            Fractional CTO | Staff Mobile Engineer | Technical Leader
+          </p>
           <div class="contact-info">
             <a href="mailto:info.dilawer@gmail.com">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email"> info.dilawer@gmail.com
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg"
+                alt="Email"
+              />
+              info.dilawer@gmail.com
             </a>
-            <a href="https://linkedin.com/in/dilawerhussain" target="_blank">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"> LinkedIn
+            <a
+              href="https://linkedin.com/in/dilawerhussain"
+              target="_blank"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+                alt="LinkedIn"
+              />
+              LinkedIn
             </a>
             <a href="https://github.com/dilawer" target="_blank">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"> GitHub
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg"
+                alt="GitHub"
+              />
+              GitHub
             </a>
             <a href="tel:+92XXXXXXXXX">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Phone"> +92-XXX-XXXXXXX
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                alt="Phone"
+              />
+              +92-XXX-XXXXXXX
             </a>
           </div>
         </div>
@@ -226,18 +247,262 @@
     </div>
   </section>
 
-  <!-- Example of your summary card (you can add the rest from your existing file) -->
-  <div class="main-content">
-    <div class="container">
-      <div class="card">
-        <h2 class="section-title">Professional Summary</h2>
-        <div class="summary">
-          <p><strong>Mobile Engineering Leader & Fractional CTO</strong> with 14+ years architecting and delivering 300+ mobile and web applications across 15+ industries. Deep expertise in native iOS (Swift, Objective-C) and Android (Kotlin, Java), plus cross-platform frameworks (React Native, Flutter). Proven track record building and scaling engineering teams, defining product strategy, and delivering technology solutions that helped startups raise $20M+ in funding.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            
+            <!-- Summary Card -->
+            <div class="card">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary">
+                    <p><strong>Mobile Engineering Leader & Fractional CTO</strong> with 14+ years architecting and delivering 300+ mobile and web applications across 15+ industries. Deep expertise in native iOS (Swift, Objective-C) and Android (Kotlin, Java), plus cross-platform frameworks (React Native, Flutter). Proven track record building and scaling engineering teams, defining product strategy, and delivering technology solutions that helped startups raise $20M+ in funding.</p>
+                    <p><strong>Unique Blend:</strong> Technical depth + team leadership + product thinking + academic mentorship. Successfully delivered solutions for clients across 8 countries spanning FinTech, HealthTech, EV, IoT, eCommerce, and On-Demand services.</p>
+                </div>
 
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">300+</div>
+                        <div class="stat-label">Apps Delivered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">14+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">600+</div>
+                        <div class="stat-label">IoT Deployments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$20M+</div>
+                        <div class="stat-label">Funding Enabled</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Technical Expertise -->
+            <div class="card">
+                <h2 class="section-title">Core Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Mobile Native</h4>
+                        <p>Swift, Objective-C, Kotlin, Java, SwiftUI, UIKit, Jetpack Compose</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Cross-Platform</h4>
+                        <p>React Native, Flutter, Xamarin</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web Stack</h4>
+                        <p>ReactJS, NodeJS, PHP/Laravel</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend & Cloud</h4>
+                        <p>Firebase, AWS, REST/GraphQL APIs, MySQL, PostgreSQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Specializations</h4>
+                        <p>IoT Integration, BLE, Geolocation, Payment Systems, Real-time Tracking</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <p>Xcode, Android Studio, Git, Jira, CI/CD, Fastlane</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Highlights -->
+            <div class="card">
+                <h2 class="section-title">Career Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-item">300+ Applications Delivered across 15+ industries for startups and enterprises globally</div>
+                    <div class="highlight-item">IoT at Scale: Deployed in 600+ institutions enabling real-time student safety monitoring</div>
+                    <div class="highlight-item">20+ Sports Apps from unified white-label coaching platform</div>
+                    <div class="highlight-item">Built marketplace ecosystems connecting thousands of service providers with customers</div>
+                    <div class="highlight-item">Interviewed 5,000+ candidates and built teams from 3 to 25+ members</div>
+                    <div class="highlight-item">Global Experience: USA, Canada, Mexico, Spain, Denmark, Netherlands, Saudi Arabia, Oman</div>
+                    <div class="highlight-item">Taught 8 Semesters at University of the Punjab covering Mobile, Web, and Entrepreneurship</div>
+                    <div class="highlight-item">Mentored 25-30 Senior IT Professionals in UK Product Management Accelerator</div>
+                    <div class="highlight-item">Technical leadership contributed to $20M+ raised by client startups</div>
+                </div>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="card">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">Founder & CTO</div>
+                        <div class="experience-company">Tbox Solutions</div>
+                        <div class="experience-meta">📍 Lahore, Pakistan | 📅 2010 – Present</div>
+                    </div>
+                    <div class="experience-content">
+                        <strong>Technical Leadership:</strong>
+                        <ul>
+                            <li>Architected and delivered 300+ native and cross-platform mobile applications across FinTech, HealthTech, EV, IoT, eCommerce, and On-Demand sectors</li>
+                            <li>Built scalable systems serving 100K+ active users with 99.9% uptime</li>
+                            <li>Established engineering best practices, code review processes, and CI/CD pipelines reducing release cycles by 40%</li>
+                            <li>Led technical due diligence for clients raising venture funding, resulting in $20M+ secured</li>
+                        </ul>
+                        <strong>Team & Product Leadership:</strong>
+                        <ul>
+                            <li>Scaled engineering team from 3 to 25+ members (mobile, web, QA, DevOps)</li>
+                            <li>Performed roles spanning CTO, Technical Product Manager, Team Lead, and Technical Consultant</li>
+                            <li>Conducted 5,000+ technical interviews establishing robust hiring frameworks</li>
+                            <li>Mentored junior and mid-level engineers into technical leads</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">Fractional CTO / Mobile Consultant</div>
+                        <div class="experience-company">Global Remote</div>
+                        <div class="experience-meta">📅 2013 – Present</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li>Partnered with 40+ startups to define technical roadmaps, select technology stacks, and execute MVP strategies</li>
+                            <li>Provided architecture reviews, code audits, and team scaling guidance</li>
+                            <li>Upwork Top Rated Plus: $100K+ earned, 103+ projects, 4,500+ hours, 100% Job Success Score</li>
+                            <li>Delivered consulting across USA, Europe, and Middle East markets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">Visiting Lecturer</div>
+                        <div class="experience-company">University of the Punjab (PUCIT)</div>
+                        <div class="experience-meta">📍 Lahore, Pakistan | 📅 2018 – 2022</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li>Taught 8 consecutive semesters covering Mobile App Development (iOS, Android), Web Development, Entrepreneurship, and Enterprise Software Development</li>
+                            <li>Conducted 80+ classroom sessions integrating real-world startup experience with academic curriculum</li>
+                            <li>Supervised 15+ final-year project teams producing production-grade applications</li>
+                            <li>Bridged industry-academia gap by teaching scalable architecture, clean code practices, and product thinking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">Technical Mentor</div>
+                        <div class="experience-company">Product Management Accelerator (UK)</div>
+                        <div class="experience-meta">🌐 Remote | 📅 2021 – 2022</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li>Mentored cohort of 25-30 experienced IT professionals (average 10+ years experience) in funded UK EdTech startup</li>
+                            <li>Provided guidance on agile methodologies, MVP validation, technical-product alignment, and leadership practices</li>
+                            <li>Supported professionals transitioning into product management and technical leadership roles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Studies -->
+            <div class="card">
+                <h2 class="section-title">Representative Case Studies</h2>
+                
+                <div class="case-study">
+                    <h4>🏫 IoT School Safety Platform</h4>
+                    <div class="case-study-section">
+                        <strong>Challenge:</strong>
+                        <p>Schools needed real-time visibility into student transportation for safety and parent communication.</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Solution:</strong>
+                        <p>Built end-to-end iOS/Android app with GPS tracking, geofencing, automated notifications, and admin dashboard.</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Impact:</strong>
+                        <p>Deployed in 600+ schools, tracking thousands of daily routes with 99.9% uptime.</p>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h4>⚽ Multi-Brand Sports Coaching Suite</h4>
+                    <div class="case-study-section">
+                        <strong>Challenge:</strong>
+                        <p>Sports organizations needed customized coaching apps without building from scratch.</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Solution:</strong>
+                        <p>Architected white-label platform enabling 20+ branded apps from single codebase.</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Impact:</strong>
+                        <p>60% cost reduction vs. individual builds, 3-week time-to-market per new brand.</p>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h4>🔧 On-Demand Services Marketplace</h4>
+                    <div class="case-study-section">
+                        <strong>Challenge:</strong>
+                        <p>Connect customers with nearby service providers (electricians, designers, freelancers).</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Solution:</strong>
+                        <p>Built dual-sided marketplace with geolocation, real-time booking, payments, and rating system.</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Impact:</strong>
+                        <p>Launched in 3 markets, 10K+ service providers onboarded in first year.</p>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h4>🚗 EV Charging Network</h4>
+                    <div class="case-study-section">
+                        <strong>Challenge:</strong>
+                        <p>EV drivers needed seamless way to find, book, and pay for charging stations.</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Solution:</strong>
+                        <p>Mobile apps with station discovery, availability tracking, navigation, and integrated payments.</p>
+                    </div>
+                    <div class="case-study-section">
+                        <strong>Impact:</strong>
+                        <p>Contributed to client raising Series A funding.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Domain Expertise -->
+            <div class="card">
+                <h2 class="section-title">Domain Expertise (15+ Industries)</h2>
+                <div class="domains-grid">
+                    <div class="domain-tag">💳 FinTech</div>
+                    <div class="domain-tag">🏥 HealthTech</div>
+                    <div class="domain-tag">🚗 EV & Automotive</div>
+                    <div class="domain-tag">🏫 EdTech</div>
+                    <div class="domain-tag">🛒 eCommerce</div>
+                    <div class="domain-tag">📦 Logistics</div>
+                    <div class="domain-tag">🏠 On-Demand Services</div>
+                    <div class="domain-tag">💇 Beauty & Wellness</div>
+                    <div class="domain-tag">⚽ Sports Tech</div>
+                    <div class="domain-tag">📱 Media & Publishing</div>
+                    <div class="domain-tag">💬 Communication</div>
+                    <div class="domain-tag">🌐 IoT Solutions</div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h3>Let's Build Something Amazing Together</h3>
+                <p>Whether you need a Fractional CTO, Staff Engineer, or Technical Consultant — I bring 14 years of proven expertise to help scale your technology and team.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:your.email@example.com" class="btn btn-primary">📧 Get in Touch</a>
+                    <a href="https://linkedin.com/in/dilawerhussain" target="_blank" class="btn btn-secondary">💼 Connect on LinkedIn</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -245,6 +510,5 @@
       <p>Fractional CTO | Staff Mobile Engineer | Technical Leader</p>
     </div>
   </footer>
-
 </body>
 </html>
