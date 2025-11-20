@@ -12,6 +12,48 @@
 
 <!-- Hero Section -->
 <section class="hero">
+    <div class="hero-anim" aria-hidden="false">
+        <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false" role="img">
+            <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <circle class="anim-dot dot-1" cx="120" cy="90" r="28" />
+                <circle class="anim-dot dot-2" cx="260" cy="140" r="18" />
+                <circle class="anim-dot dot-3" cx="420" cy="70" r="22" />
+                <circle class="anim-dot dot-4" cx="620" cy="110" r="12" />
+                <circle class="anim-dot dot-5" cx="820" cy="60" r="30" />
+                <circle class="anim-dot dot-6" cx="980" cy="150" r="16" />
+                <path class="anim-line line-1" d="M80 200 C200 160, 320 220, 440 200" />
+                <path class="anim-line line-2" d="M560 240 C680 200, 800 260, 920 220" />
+            </g>
+        </svg>
+    </div>
+    <!-- Alternate animation (hidden by default). Toggle with `document.querySelector('.hero').classList.toggle('alt')` -->
+    <div class="hero-anim-alt" aria-hidden="true" style="display:none">
+        <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false" role="img">
+            <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                    <stop offset="0%" stop-color="rgba(59,130,246,0.18)" />
+                    <stop offset="100%" stop-color="rgba(59,130,246,0.02)" />
+                </linearGradient>
+            </defs>
+            <g fill="none">
+                <!-- moving diagonal grid -->
+                <g class="grid-lines">
+                    <!-- generate a few lines -->
+                    <line x1="-200" y1="20" x2="1400" y2="20" />
+                    <line x1="-200" y1="80" x2="1400" y2="80" />
+                    <line x1="-200" y1="140" x2="1400" y2="140" />
+                    <line x1="-200" y1="200" x2="1400" y2="200" />
+                    <line x1="-200" y1="260" x2="1400" y2="260" />
+                </g>
+                <!-- soft blobby gradient shapes -->
+                <g>
+                    <ellipse cx="220" cy="150" rx="180" ry="60" class="blob b1" />
+                    <ellipse cx="720" cy="80" rx="160" ry="50" class="blob b2" />
+                    <ellipse cx="980" cy="190" rx="140" ry="40" class="blob b3" />
+                </g>
+            </g>
+        </svg>
+    </div>
     <div class="container hero-content">
         <div class="hero-inner">
             <img src="images/dilawer.png" alt="Dilawer Hussain" class="hero-img">

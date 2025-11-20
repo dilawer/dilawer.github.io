@@ -58,3 +58,5 @@
     }
   });
 })();
+
+// (animation toggle removed) 
