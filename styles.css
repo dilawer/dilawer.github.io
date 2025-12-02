@@ -30,6 +30,131 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Robo
 .hero-name { font-size: 2.75rem; font-weight: 700; margin-bottom: 10px; transition: all 0.4s ease; }
 .hero-position { font-size: 1.2rem; opacity: 0.9; transition: all 0.4s ease; }
 
+/* Navigation (top-right) */
+.site-nav { display: flex; align-items: center; gap: 12px; position: fixed; top: 12px; right: 20px; z-index: 1100; }
+.nav-toggle { display: none; background: transparent; border: none; color: white; font-size: 1.4rem; cursor: pointer; }
+.nav-links { list-style: none; display: flex; gap: 10px; margin: 0; padding: 0; align-items: center; }
+.nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 6px 8px; border-radius: 8px; transition: background 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease; font-size: 0.95rem; cursor: pointer; }
+.nav-links a:hover, .nav-links a:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    background: rgba(255,255,255,0.14);
+    outline: none;
+}
+
+/* Make hover/focus more visible in sticky (light) mode */
+.hero.sticky .nav-links a:hover, .hero.sticky .nav-links a:focus {
+    background: var(--bg-light);
+    box-shadow: 0 6px 14px rgba(16,24,40,0.06);
+}
+
+/* Make .container within .hero a positioning context so nav aligns with container edges */
+.hero > .container { position: relative; }
+
+/* Hero animation layer (subtle, transparent tech-style) */
+.hero-anim { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.hero-anim svg { width: 100%; height: 100%; display: block; }
+.hero > .container { z-index: 2; }
+
+/* Hero animation: subtle, transparent tech-style (original) */
+.anim-dot { fill: rgba(255,255,255,0.08); mix-blend-mode: screen; filter: blur(0.2px); }
+.anim-line { stroke: rgba(255,255,255,0.06); stroke-width: 1.5; }
+
+/* Individual dot variations */
+.anim-dot.dot-1 { fill: rgba(255,255,255,0.10); animation: floaty 9s ease-in-out infinite; }
+.anim-dot.dot-2 { fill: rgba(255,255,255,0.07); animation: floaty 11s ease-in-out infinite; }
+.anim-dot.dot-3 { fill: rgba(255,255,255,0.09); animation: floaty 10s ease-in-out infinite; }
+.anim-dot.dot-4 { fill: rgba(59,130,246,0.10); animation: floaty 12s ease-in-out infinite; }
+.anim-dot.dot-5 { fill: rgba(255,255,255,0.06); animation: floaty 8s ease-in-out infinite; }
+.anim-dot.dot-6 { fill: rgba(255,255,255,0.05); animation: floaty 13s ease-in-out infinite; }
+.anim-line.line-1 { animation: lineShift 14s linear infinite; }
+.anim-line.line-2 { animation: lineShift 16s linear infinite; }
+
+@keyframes floaty {
+    0% { transform: translateY(0) translateX(0) scale(1); opacity: 1; }
+    25% { transform: translateY(-6px) translateX(3px) scale(1.02); opacity: 0.95; }
+    50% { transform: translateY(0px) translateX(-2px) scale(0.995); opacity: 0.9; }
+    75% { transform: translateY(6px) translateX(2px) scale(1.01); opacity: 0.95; }
+    100% { transform: translateY(0) translateX(0) scale(1); opacity: 1; }
+}
+
+@keyframes lineShift {
+    0% { stroke-dashoffset: 0; opacity: 1; }
+    50% { stroke-dashoffset: 10; opacity: 0.85; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+
+
+/* Reduce intensity on small screens to avoid clutter */
+@media (max-width: 600px) {
+    .hero-anim { opacity: 0.6; }
+    .anim-line { display: none; }
+}
+
+/* Alternate hero animation (grid + soft blobs) */
+.hero-anim-alt { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.hero-anim-alt svg { width: 100%; height: 100%; display: block; }
+.hero-anim-alt .grid-lines line { stroke: rgba(255,255,255,0.04); stroke-width: 1; transform-origin: center; }
+.hero-anim-alt .blob { fill: url(#g1); opacity: 0.12; filter: blur(10px); }
+
+/* animate grid lines slowly to the left */
+@keyframes gridMove {
+    0% { transform: translateX(0); opacity: 1; }
+    50% { transform: translateX(-24px); opacity: 0.85; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+.hero-anim-alt .grid-lines { animation: gridMove 12s linear infinite; }
+
+/* subtle blob morph/shift */
+@keyframes blobFloat {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-8px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+}
+.hero-anim-alt .b1 { animation: blobFloat 11s ease-in-out infinite; }
+.hero-anim-alt .b2 { animation: blobFloat 13s ease-in-out infinite; }
+.hero-anim-alt .b3 { animation: blobFloat 9s ease-in-out infinite; }
+
+/* Toggle behavior: by default the alt layer is hidden; when .hero has class .alt, show alt and hide base */
+.hero .hero-anim-alt { display: none; }
+.hero.alt .hero-anim { display: none; }
+.hero.alt .hero-anim-alt { display: block; }
+
+/* end original animation blocks */
+
+/* Sticky header: ensure nav adapts to light background and stays visible */
+.hero.sticky .nav-links a { color: var(--text-dark); }
+.hero.sticky .nav-toggle { color: var(--text-dark); }
+.hero.sticky .site-nav { top: 8px; }
+
+/* Mobile: hide links, show toggle */
+@media (max-width: 768px) {
+    .nav-toggle { display: inline-block; }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        flex-direction: column;
+        background: var(--bg-white);
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        display: none;
+        min-width: 180px;
+    }
+    .nav-links a { color: var(--text-dark); padding: 8px 12px; }
+    .nav-links.open { display: flex; }
+}
+
+/* Align nav with centered container on wide viewports */
+@media (min-width: 1200px) {
+    .site-nav {
+        /* (viewport width - container width)/2 + container padding (20px) */
+        right: calc((100% - 1200px) / 2 + 20px);
+    }
+}
+
 .contact-info {
     display: flex;
     justify-content: center;
